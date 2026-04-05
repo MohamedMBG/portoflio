@@ -97,10 +97,12 @@ nav {
 #hero { min-height: 100vh; display: grid; grid-template-columns: 1fr 1fr; border-bottom: 1px solid var(--rule); position: relative; z-index: 1; }
 .hero-left { padding: 140px 64px 80px 48px; display: flex; flex-direction: column; justify-content: center; border-right: 1px solid var(--rule); position: relative; }
 .hero-left::after { content: ''; position: absolute; bottom: 0; right: 0; width: 100%; height: 50%; background: linear-gradient(to top, rgba(0,0,0,0.02), transparent); pointer-events: none; z-index: -1; }
-.hero-eyebrow { display: flex; align-items: center; gap: 12px; margin-bottom: 40px; padding: 6px 14px; background: rgba(52, 199, 89, 0.1); border-radius: 20px; width: fit-content; border: 1px solid rgba(52, 199, 89, 0.2); }
+.hero-eyebrow { display: flex; align-items: center; gap: 12px; margin-bottom: 40px; padding: 6px 16px 6px 8px; background: rgba(52, 199, 89, 0.1); border-radius: 30px; width: fit-content; border: 1px solid rgba(52, 199, 89, 0.2); box-shadow: 0 4px 16px rgba(52,199,89,0.05); }
+.hero-avatar { width: 26px; height: 26px; border-radius: 50%; overflow: hidden; border: 1px solid rgba(52, 199, 89, 0.4); flex-shrink: 0; box-shadow: 0 0 12px rgba(52,199,89,0.2); background: var(--white); }
+.hero-avatar img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .eyebrow-dot { width: 8px; height: 8px; background: var(--accent-green); border-radius: 50%; flex-shrink: 0; animation: blink 2s ease-in-out infinite; box-shadow: 0 0 8px var(--accent-green); }
 @keyframes blink { 0%,100%{opacity:1; transform: scale(1);} 50%{opacity:0.4; transform: scale(0.95);} }
-.eyebrow-text { font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent-green); font-weight: 600; }
+.eyebrow-text { font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent-green); font-weight: 600; display: flex; align-items: center; gap: 10px; }
 .hero-name { font-family: var(--serif); font-size: clamp(3.5rem, 6vw, 5.5rem); font-weight: 400; line-height: 0.95; letter-spacing: -0.03em; margin-bottom: 16px; color: var(--ink); text-shadow: 0 4px 24px rgba(0,0,0,0.03); }
 .hero-name em { font-style: italic; color: transparent; background: linear-gradient(90deg, var(--ink3), var(--ink)); -webkit-background-clip: text; background-clip: text; }
 .hero-role { font-family: var(--mono); font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink3); margin-bottom: 44px; padding-bottom: 44px; border-bottom: 1px solid var(--rule); }
@@ -168,6 +170,11 @@ nav {
 .ac-list li:last-child { border-bottom: none; }
 .ac-list li::before { content: ''; width: 6px; height: 6px; background: var(--ink4); border-radius: 50%; flex-shrink: 0; transition: background 0.2s; }
 .ac-list li:hover::before { background: var(--ink); }
+.ab-profile { display: flex; align-items: center; gap: 16px; margin-bottom: 20px; }
+.ab-avatar { width: 68px; height: 68px; border-radius: 50%; overflow: hidden; border: 2px solid var(--white); flex-shrink: 0; box-shadow: 0 4px 16px rgba(0,0,0,0.08); background: var(--off); }
+.ab-avatar img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.ab-name { font-family: var(--serif); font-size: 1.6rem; color: var(--ink); line-height: 1.1; }
+.ab-name em { font-style: italic; color: var(--ink3); }
 
 /* PROJECTS */
 .project-entry { border-bottom: 1px solid var(--rule); display: grid; grid-template-columns: 80px 1fr 1fr; min-height: 460px; transition: all 0.3s ease; position: relative; }
@@ -373,8 +380,8 @@ footer { padding: 0; border-top: 1px solid var(--rule); display: grid; grid-temp
 <section id="hero">
   <div class="hero-left">
     <div class="hero-eyebrow reveal">
-      <div class="eyebrow-dot"></div>
-      <span class="eyebrow-text">Freelance &amp; 4th Year EMSI 4DDSIR Student</span>
+      <div class="hero-avatar"><img src="assets/profile.jpg" alt="Mohamed"></div>
+      <span class="eyebrow-text">Freelance &amp; 4th Year EMSI <div class="eyebrow-dot" style="margin: 0 2px"></div> Available</span>
     </div>
     <h1 class="hero-name reveal d1">Mohamed<br><em>Baghdad.</em></h1>
     <p class="hero-role reveal d2">Software Engineer · ALX Certified Backend Dev</p>
@@ -434,7 +441,11 @@ footer { padding: 0; border-top: 1px solid var(--rule); display: grid; grid-temp
   <div class="about-grid">
     <div class="about-col reveal">
       <div class="ac-label">Background</div>
-      <p class="ac-text">I'm <strong>Mohamed Baghdad</strong>, an ALX Certified Backend Engineer and a 4th-year 4DDSIR student at EMSI. As a freelancer with a product engineering mindset, I architect systems, define APIs, and build pipelines that ship reliably.<br><br>My work spans mobile apps, POS systems, and SaaS platforms — designed around <strong>real operational use cases</strong>.</p>
+      <div class="ab-profile">
+        <div class="ab-avatar"><img src="assets/profile.jpg" alt="Mohamed Baghdad"></div>
+        <div class="ab-name">Mohamed<br><em>Baghdad.</em></div>
+      </div>
+      <p class="ac-text">An ALX Certified Backend Engineer and a 4th-year 4DDSIR student at EMSI. As a freelancer with a product engineering mindset, I architect systems, define APIs, and build pipelines that ship reliably.<br><br>My work spans mobile apps, POS systems, and SaaS platforms — designed around <strong>real operational use cases</strong>.</p>
     </div>
     <div class="about-col reveal d1">
       <div class="ac-label">What I Build</div>
