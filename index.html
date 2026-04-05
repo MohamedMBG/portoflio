@@ -330,35 +330,73 @@ footer { padding: 0; border-top: 1px solid var(--rule); display: grid; grid-temp
 .d1{transition-delay:.08s} .d2{transition-delay:.16s} .d3{transition-delay:.24s} .d4{transition-delay:.32s} .d5{transition-delay:.4s}
 
 /* RESPONSIVE */
+  @media(max-width:1280px){
+    .process-grid { grid-template-columns: repeat(3, 1fr); }
+    .hero-name, .contact-title { font-size: clamp(2.5rem, 4.5vw, 4rem); }
+  }
+  @media(max-width:1080px){
+    .about-grid { grid-template-columns: 1fr 1fr; }
+    .hero-left, .hero-right, .contact-left, .contact-right, .sh-left, .sh-right { padding-left: 32px; padding-right: 32px; }
+    .project-entry { grid-template-columns: 1fr 1fr; }
+    .pe-index { display: none; }
+    .pe-info, .pe-visual { padding: 48px 32px; }
+  }
   @media(max-width:960px){
     nav{padding:0 24px}
     .nav-links{display:none}
-    #hero{grid-template-columns:1fr; background: var(--off);}
+    #hero{grid-template-columns:1fr; background: transparent;}
     .hero-left{padding:120px 24px 60px; border-right:none;}
-    .hero-right{padding:60px 24px; background: none;}
-    .hero-metrics { grid-template-columns: 1fr; gap: 12px; }
+    .hero-right{padding:20px 24px 80px; background: none;}
+    .hero-metrics { grid-template-columns: 1fr 1fr 1fr; gap: 12px; }
     .section-header{grid-template-columns:1fr}
-    .sh-left{border-right:none;border-bottom:1px solid var(--rule)}
+    .sh-left{border-right:none;border-bottom:1px solid var(--rule); padding:40px 24px;}
     .sh-right{padding: 32px 24px;}
-    .about-grid{grid-template-columns:1fr; padding: 24px;}
+    .about-grid{grid-template-columns:1fr; padding: 24px; gap: 16px;}
+    .about-col { padding: 32px 24px; }
     .project-entry{grid-template-columns:1fr}
-    .pe-index{display:none}
     .pe-info{border-right:none;border-bottom:1px solid var(--rule);padding:40px 24px}
     .pe-visual{padding:40px 24px;}
-    .skills-table td{padding:24px 24px}
-    .skills-table td:first-child{width:120px}
-    .skills-table td:nth-child(2) { display: none; } /* Hide bars on mobile for cleaner look */
-    .process-grid{grid-template-columns:1fr; padding: 24px;}
+    .skills-table tr { display: block; border-bottom: 1px solid var(--rule); }
+    .skills-table tr:last-child { border-bottom: none; }
+    .skills-table td { display: block; padding: 24px; border-bottom: none !important;}
+    .skills-table td:first-child{width:100%; padding-bottom: 8px; border-right: none;}
+    .skills-table td:nth-child(2) { display: none; }
+    .skills-table td:nth-child(3) { padding-top: 0; }
+    .process-grid{grid-template-columns:repeat(2, 1fr); padding: 24px;}
     .eng-grid{grid-template-columns:1fr}
     .eng-left{border-right:none; padding: 24px;}
     .eng-item{padding: 24px;}
-    .eng-right { padding: 24px; }
+    .eng-right { padding: 40px 24px; }
     #contact{grid-template-columns:1fr}
     .contact-left{padding:60px 24px;}
     .contact-left::after { display: none; }
-    .contact-right{padding:60px 24px;}
-    footer{grid-template-columns:1fr}
+    .contact-right{padding:40px 24px 80px;}
+    footer{grid-template-columns:1fr; gap: 0;}
     .footer-cell{border-right:none;border-left:none;border-bottom:1px solid var(--rule);justify-content:flex-start !important;padding:20px 24px}
+  }
+  @media(max-width:768px){
+    .process-grid { grid-template-columns: 1fr; }
+    .hero-metrics { grid-template-columns: 1fr; }
+  }
+  @media(max-width:600px){
+    .hero-name { font-size: 3rem; margin-bottom: 12px; }
+    .hero-desc { font-size: 1rem; margin-bottom: 32px; }
+    .hero-actions { flex-direction: column; width: 100%; gap: 12px; }
+    .btn-ink, .btn-ghost { width: 100%; text-align: center; }
+    .sh-title { font-size: 2.2rem; }
+    .pe-name { font-size: 2.2rem; }
+    .pe-links { flex-direction: column; gap: 16px; border-top: none; padding-top: 0; }
+    .pe-link { border-right: none; padding: 0; border-bottom: 1px solid var(--rule); padding-bottom: 16px; margin: 0; width: 100%; justify-content: space-between; }
+    .pe-link::after { content: '→'; color: var(--ink4); font-family: var(--mono); }
+    .flow-diagram { overflow-x: auto; -webkit-overflow-scrolling: touch; border-radius: 8px; }
+    .fd-row { min-width: 440px; }
+    .contact-title { font-size: 2.6rem; }
+    .contact-actions { flex-direction: column; width: 100%; }
+    .contact-desc { margin-bottom: 32px; }
+    .terminal { font-size: 0.85rem; border-radius: 8px; }
+    .t-filename { display: none; }
+    .ci-pipeline { border-radius: 8px; }
+    .ticker-item { font-size: 0.6rem; padding: 0 20px; }
   }
 </style>
 </head>
