@@ -553,91 +553,87 @@ footer { padding: 0; border-top: 1px solid var(--rule); display: grid; grid-temp
     </div>
   </div>
 
-  <!-- P2 -->
+  <!-- P2: Coffee Shop Loyalty -->
   <div class="project-entry reveal">
-    <div class="pe-index"><div class="pe-num-v">02 — Admin Loyalty</div></div>
+    <div class="pe-index"><div class="pe-num-v">02 — Coffee Shop Loyalty</div></div>
     <div class="pe-info">
-      <div class="pe-badge">Business Platform</div>
-      <h3 class="pe-name">Admin Loyalty</h3>
-      <p class="pe-sub">Loyalty Management System — Coffee Shop CRM</p>
-      <p class="pe-desc">Increases customer retention and repeat purchases through automated loyalty tracking and reward systems.</p>
-      <div class="pe-stack"><span class="pe-tech">Laravel</span><span class="pe-tech">MySQL</span><span class="pe-tech">REST API</span><span class="pe-tech">JavaScript</span><span class="pe-tech">GitHub Actions</span><span class="pe-tech">Multi-role Auth</span></div>
+      <div class="pe-badge">Full-Stack CRM · 2024</div>
+      <h3 class="pe-name">Coffee Shop Loyalty System</h3>
+      <p class="pe-sub">Laravel · MySQL · RBAC · REST API · GitHub Actions</p>
+      <p class="pe-desc">A two-part digital ecosystem for coffee shops: an admin panel managing loyalty programs and analytics, connected to a customer-facing networking platform with real-time point tracking across multiple shops.</p>
+      <div class="pe-stack"><span class="pe-tech">Laravel</span><span class="pe-tech">MySQL</span><span class="pe-tech">RBAC</span><span class="pe-tech">REST API</span><span class="pe-tech">JWT Auth</span><span class="pe-tech">GitHub Actions</span><span class="pe-tech">JavaScript</span></div>
       <div class="pe-links"><a href="#" class="pe-link">Case Study →</a><a href="#" class="pe-link">GitHub ↗</a></div>
     </div>
     <div class="pe-visual">
-      <div class="pv-label">// dashboard metrics</div>
+      <div class="pv-label">// loyalty flow + RBAC layers</div>
       <div class="flow-diagram">
-        <div class="fd-row"><div class="fd-cell hd" style="flex:2">Metric</div><div class="fd-cell hd">Value</div><div class="fd-cell hd" style="flex:2">Trend</div></div>
-        <div class="fd-row"><div class="fd-cell" style="flex:2">Active Clients</div><div class="fd-cell bg-b">124</div><div class="fd-cell" style="flex:2"><div class="fd-bar"><div class="fd-bar-fill" style="width:78%"></div></div></div></div>
-        <div class="fd-row"><div class="fd-cell" style="flex:2">Retention Rate</div><div class="fd-cell bg-g">89%</div><div class="fd-cell" style="flex:2"><div class="fd-bar"><div class="fd-bar-fill" style="width:89%"></div></div></div></div>
-        <div class="fd-row"><div class="fd-cell" style="flex:2">Points Issued</div><div class="fd-cell">2,400</div><div class="fd-cell" style="flex:2"><div class="fd-bar"><div class="fd-bar-fill" style="width:60%"></div></div></div></div>
-        <div class="fd-row"><div class="fd-cell" style="flex:2">Redemptions</div><div class="fd-cell">341</div><div class="fd-cell" style="flex:2"><div class="fd-bar"><div class="fd-bar-fill" style="width:44%"></div></div></div></div>
+        <div class="fd-row"><div class="fd-cell hd">Layer</div><div class="fd-cell hd">Role</div><div class="fd-cell hd">Access</div></div>
+        <div class="fd-row"><div class="fd-cell bg-b">Super Admin</div><div class="fd-cell">Full system control</div><div class="fd-cell bg-g" style="font-size:0.65rem">All shops · All data</div></div>
+        <div class="fd-row"><div class="fd-cell bg-b">Shop Admin</div><div class="fd-cell">Manage own shop</div><div class="fd-cell" style="font-size:0.65rem">Clients · Points · Reports</div></div>
+        <div class="fd-row"><div class="fd-cell">Customer</div><div class="fd-cell">View &amp; redeem</div><div class="fd-cell" style="font-size:0.65rem">Balance · Rewards</div></div>
       </div>
       <div class="pv-features">
-        <div class="pvf-item">Points-based rewards with configurable rules</div>
-        <div class="pvf-item">QR / phone-based customer identification</div>
-        <div class="pvf-item">Multi-role admin panel</div>
-        <div class="pvf-item">Retention analytics &amp; reporting</div>
+        <div class="pvf-item">Atomic point transactions — balance never corrupted</div>
+        <div class="pvf-item">Configurable reward rules (e.g. 10 coffees → 1 free)</div>
+        <div class="pvf-item">Cross-shop loyalty network with shared ecosystem</div>
+        <div class="pvf-item">Admin analytics: retention rate, redemptions, revenue</div>
       </div>
     </div>
   </div>
 
-  <!-- P3 -->
+  <!-- P3: Scalable POS -->
   <div class="project-entry reveal">
-    <div class="pe-index"><div class="pe-num-v">03 — Optician POS</div></div>
+    <div class="pe-index"><div class="pe-num-v">03 — Scalable POS</div></div>
     <div class="pe-info">
-      <div class="pe-badge">Enterprise System</div>
-      <h3 class="pe-name">Optician POS System</h3>
-      <p class="pe-sub">Sales, Operations &amp; Store Management Platform</p>
-      <p class="pe-desc">Optimizes sales operations and inventory management for opticians, reducing manual tracking and improving transaction efficiency.</p>
-      <div class="pe-stack"><span class="pe-tech">Laravel</span><span class="pe-tech">Oracle DB</span><span class="pe-tech">MySQL</span><span class="pe-tech">REST API</span><span class="pe-tech">CI/CD</span><span class="pe-tech">Inventory Logic</span></div>
+      <div class="pe-badge">Enterprise Backend · 2024</div>
+      <h3 class="pe-name">Scalable POS System</h3>
+      <p class="pe-sub">Laravel · MySQL · RBAC · Optimized Queries</p>
+      <p class="pe-desc">Architected a monolithic backend for opticians handling inventory, sales, and prescriptions — with strict Role-Based Access Control, optimized DB indexing on hot query paths, and rewritten joins that cut response times significantly.</p>
+      <div class="pe-stack"><span class="pe-tech">Laravel</span><span class="pe-tech">MySQL</span><span class="pe-tech">RBAC</span><span class="pe-tech">REST API</span><span class="pe-tech">CI/CD</span><span class="pe-tech">Query Optimization</span><span class="pe-tech">Oracle DB</span></div>
       <div class="pe-links"><a href="#" class="pe-link">Case Study →</a><a href="#" class="pe-link">GitHub ↗</a></div>
     </div>
     <div class="pe-visual">
-      <div class="pv-label">// entity schema (simplified)</div>
+      <div class="pv-label">// entity schema + role access</div>
       <div class="flow-diagram">
         <div class="fd-row"><div class="fd-cell hd">Entity</div><div class="fd-cell hd">Key Fields</div><div class="fd-cell hd">Relation</div></div>
         <div class="fd-row"><div class="fd-cell bg-b">Customer</div><div class="fd-cell" style="font-size:0.6rem">id, name, phone, prescription</div><div class="fd-cell" style="font-size:0.6rem;color:var(--ink4)">1:N → Orders</div></div>
         <div class="fd-row"><div class="fd-cell bg-b">Product</div><div class="fd-cell" style="font-size:0.6rem">id, type, brand, stock, price</div><div class="fd-cell" style="font-size:0.6rem;color:var(--ink4)">N:M → Orders</div></div>
         <div class="fd-row"><div class="fd-cell bg-b">Order</div><div class="fd-cell" style="font-size:0.6rem">id, customer_id, items, total</div><div class="fd-cell" style="font-size:0.6rem;color:var(--ink4)">1:N → Items</div></div>
-        <div class="fd-row"><div class="fd-cell bg-b">Inventory</div><div class="fd-cell" style="font-size:0.6rem">product_id, qty, threshold</div><div class="fd-cell" style="font-size:0.6rem;color:var(--ink4)">1:1 → Product</div></div>
+        <div class="fd-row"><div class="fd-cell bg-r">Inventory</div><div class="fd-cell" style="font-size:0.6rem">product_id, qty, threshold</div><div class="fd-cell" style="font-size:0.6rem;color:var(--ink4)">1:1 → Product</div></div>
       </div>
       <div class="pv-features">
-        <div class="pvf-item">Frame &amp; lens catalog with stock management</div>
-        <div class="pvf-item">Prescription-linked customer records</div>
-        <div class="pvf-item">Sales workflow with order history</div>
-        <div class="pvf-item">Daily &amp; monthly operational reports</div>
+        <div class="pvf-item">RBAC with Admin, Staff, and Cashier roles</div>
+        <div class="pvf-item">DB indexing on hot columns — query speed improved</div>
+        <div class="pvf-item">Prescription-linked orders with history tracking</div>
+        <div class="pvf-item">Daily &amp; monthly sales reports with export</div>
       </div>
     </div>
   </div>
 
-  <!-- P4 -->
+  <!-- P4: Enterprise Car Renting -->
   <div class="project-entry reveal">
-    <div class="pe-index"><div class="pe-num-v">04 — Car Renting SaaS</div></div>
+    <div class="pe-index"><div class="pe-num-v">04 — Car Renting</div></div>
     <div class="pe-info">
-      <div class="pe-badge">SaaS Platform</div>
-      <h3 class="pe-name">Car Renting SaaS</h3>
-      <p class="pe-sub">Scalable Multi-Tenant Rental Management Platform</p>
-      <p class="pe-desc">Streamlines multi-branch rental operations and billing automation, enabling agencies to scale fleet management and significantly reduce administrative overhead.</p>
-      <div class="pe-stack"><span class="pe-tech">Laravel</span><span class="pe-tech">MongoDB</span><span class="pe-tech">MySQL</span><span class="pe-tech">REST API</span><span class="pe-tech">GitHub Actions</span><span class="pe-tech">Multi-tenant</span><span class="pe-tech">Docker</span></div>
+      <div class="pe-badge">Android Enterprise · 2023</div>
+      <h3 class="pe-name">Enterprise Car Renting</h3>
+      <p class="pe-sub">Java · Android · Firebase · Retrofit · SQLite</p>
+      <p class="pe-desc">Built a production-grade Android rental management app with robust offline-first architecture — local SQLite caching synced with Firebase in real time, and Retrofit with custom error handling for poor connectivity environments.</p>
+      <div class="pe-stack"><span class="pe-tech">Java</span><span class="pe-tech">Android</span><span class="pe-tech">Firebase</span><span class="pe-tech">Retrofit</span><span class="pe-tech">SQLite</span><span class="pe-tech">MVVM</span><span class="pe-tech">LiveData</span></div>
       <div class="pe-links"><a href="#" class="pe-link">Case Study →</a><a href="#" class="pe-link">GitHub ↗</a></div>
     </div>
     <div class="pe-visual">
-      <div class="pv-label">// saas tenant isolation model</div>
+      <div class="pv-label">// offline-first sync architecture</div>
       <div class="flow-diagram">
-        <div class="fd-row"><div class="fd-cell hd" style="flex:3;justify-content:center">SaaS Platform Layer</div></div>
-        <div class="fd-row">
-          <div class="fd-cell" style="flex:1;font-size:0.62rem;flex-direction:column;gap:3px;justify-content:center;align-items:flex-start"><strong>Agency A</strong><span style="color:var(--ink4)">Fleet · Clients · Bookings</span></div>
-          <div class="fd-cell bg-b" style="flex:1;font-size:0.62rem;flex-direction:column;gap:3px;justify-content:center;align-items:flex-start"><strong>Agency B</strong><span style="color:var(--accent-blue);opacity:.7">Fleet · Clients · Bookings</span></div>
-          <div class="fd-cell" style="flex:1;font-size:0.62rem;flex-direction:column;gap:3px;justify-content:center;align-items:flex-start"><strong>Agency N</strong><span style="color:var(--ink4)">Fleet · Clients · Bookings</span></div>
-        </div>
-        <div class="fd-row"><div class="fd-cell" style="flex:3;font-size:0.6rem;color:var(--ink4);justify-content:center">Shared Infrastructure · Isolated Data Scopes</div></div>
+        <div class="fd-row"><div class="fd-cell hd">Layer</div><div class="fd-cell hd">Source</div><div class="fd-cell hd">Strategy</div></div>
+        <div class="fd-row"><div class="fd-cell bg-b">Network</div><div class="fd-cell">Retrofit + Firebase</div><div class="fd-cell bg-g" style="font-size:0.65rem">Custom error handler</div></div>
+        <div class="fd-row"><div class="fd-cell bg-b">Cache</div><div class="fd-cell">SQLite local DB</div><div class="fd-cell" style="font-size:0.65rem">Offline-first reads</div></div>
+        <div class="fd-row"><div class="fd-cell">Sync</div><div class="fd-cell">Firebase Realtime</div><div class="fd-cell" style="font-size:0.65rem">State reconciliation</div></div>
       </div>
       <div class="pv-features">
-        <div class="pvf-item">Multi-tenant architecture with isolated data</div>
-        <div class="pvf-item">Fleet availability &amp; booking calendar</div>
-        <div class="pvf-item">Contract generation &amp; billing automation</div>
-        <div class="pvf-item">Cross-branch analytics dashboard</div>
+        <div class="pvf-item">Offline mode — full functionality without network</div>
+        <div class="pvf-item">Retrofit custom interceptors for connectivity failures</div>
+        <div class="pvf-item">State sync between SQLite cache &amp; Firebase remote</div>
+        <div class="pvf-item">Fleet booking, contracts &amp; client management</div>
       </div>
     </div>
   </div>
