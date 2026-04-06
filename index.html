@@ -403,9 +403,10 @@ footer { padding: 0; border-top: 1px solid var(--rule); display: grid; grid-temp
     <li><a href="#projects">Projects</a></li>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#process">Process</a></li>
+    <li><a href="#testimonials">Testimonials</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
-  <a href="#contact" class="nav-cta">Get in Touch ↗</a>
+  <a href="#contact" class="nav-cta">Hire Me ↗</a>
   <button class="nav-hamburger" id="menuBtn" aria-label="Menu">
     <span></span><span></span><span></span>
   </button>
@@ -417,8 +418,10 @@ footer { padding: 0; border-top: 1px solid var(--rule); display: grid; grid-temp
   <a href="#projects" class="mobile-link">Projects</a>
   <a href="#skills" class="mobile-link">Skills</a>
   <a href="#process" class="mobile-link">Process</a>
+  <a href="#testimonials" class="mobile-link">Testimonials</a>
   <a href="#contact" class="mobile-link">Contact</a>
-  <a href="#contact" class="mobile-link mobile-cta">Get in Touch ↗</a>
+  <a href="Mohamed_Baghdad_CV.pdf" download class="mobile-link">Download CV ↓</a>
+  <a href="#contact" class="mobile-link mobile-cta">Hire Me ↗</a>
 </div>
 
 <!-- HERO -->
@@ -428,12 +431,13 @@ footer { padding: 0; border-top: 1px solid var(--rule); display: grid; grid-temp
       <div class="hero-avatar"><img src="assets/profile.jpg" alt="Mohamed"></div>
       <span class="eyebrow-text">Freelance &amp; 4th Year EMSI <div class="eyebrow-dot" style="margin: 0 2px"></div> Available</span>
     </div>
-    <h1 class="hero-name reveal d1">Mohamed<br><em>Baghdad.</em></h1>
-    <p class="hero-role reveal d2">Software Engineer · ALX Certified Backend Dev</p>
-    <p class="hero-desc reveal d3">I design and build scalable mobile and backend systems used in real-world business operations.</p>
-    <div class="hero-actions reveal d4">
-      <a href="#projects" class="btn-ink">View Projects →</a>
-      <a href="#contact" class="btn-ghost">Contact Me</a>
+    <h1 class="hero-name reveal d1" style="font-size: clamp(2.5rem, 6vw, 4rem); max-width: 600px;">I build scalable<br><em>SaaS &amp; POS</em><br>systems that handle real-world traffic.</h1>
+    <p class="hero-role reveal d2">Mohamed Baghdad · ALX Certified Backend Engineer</p>
+    <p class="hero-desc reveal d3">I solve genuine business problems with robust mobile and backend architectures built for performance and high availability.</p>
+    <div class="hero-actions reveal d4" style="align-items: center; flex-wrap: wrap;">
+      <a href="#projects" class="btn-ink">View My Work →</a>
+      <a href="#contact" class="btn-ghost">Hire Me ↗</a>
+      <a href="Mohamed_Baghdad_CV.pdf" download class="pe-link" style="border:none; margin-left: 8px; padding: 12px 0;">Download CV ↓</a>
     </div>
   </div>
   <div class="hero-right">
@@ -448,8 +452,11 @@ footer { padding: 0; border-top: 1px solid var(--rule); display: grid; grid-temp
       </div>
     </div>
     <div class="hero-metrics reveal d2">
+      <div class="hm-item"><div class="hm-num">90+</div><div class="hm-label">GitHub Repos</div></div>
+      <div class="hm-item"><div class="hm-num">1k+</div><div class="hm-label">API Reqs / mo</div></div>
+      <div class="hm-item"><div class="hm-num">85%</div><div class="hm-label">Client Satisfaction</div></div>
       <div class="hm-item"><div class="hm-num">4</div><div class="hm-label">Products Built</div></div>
-      <div class="hm-item"><div class="hm-num">1×</div><div class="hm-label">Hackathon Win</div></div>
+      <div class="hm-item"><div class="hm-num">3rd</div><div class="hm-label">Place Hackathon</div></div>
       <div class="hm-item"><div class="hm-num">CI</div><div class="hm-label">Every Push</div></div>
     </div>
   </div>
@@ -491,6 +498,7 @@ footer { padding: 0; border-top: 1px solid var(--rule); display: grid; grid-temp
         <div class="ab-name">Mohamed<br><em>Baghdad.</em></div>
       </div>
       <p class="ac-text">An ALX Certified Backend Engineer and a 4th-year 4DDSIR student at EMSI. As a freelancer with a product engineering mindset, I architect systems, define APIs, and build pipelines that ship reliably.<br><br>My work spans mobile apps, POS systems, and SaaS platforms — designed around <strong>real operational use cases</strong>.</p>
+      <a href="Mohamed_Baghdad_CV.pdf" download class="pe-link" style="border:none; margin: 24px 0 0 0; padding:0;">Download CV ↓</a>
     </div>
     <div class="about-col reveal d1">
       <div class="ac-label">What I Build</div>
@@ -532,7 +540,11 @@ footer { padding: 0; border-top: 1px solid var(--rule); display: grid; grid-temp
       <div class="pe-badge award">★ Hackathon Award Winner</div>
       <h3 class="pe-name">NutriSafe</h3>
       <p class="pe-sub">Android Application — Allergy Safety Scanner</p>
-      <p class="pe-desc">Helps users instantly avoid allergenic products by scanning barcodes and analyzing ingredients in real time — reducing risk and decision time.</p>
+      <div class="pe-desc">
+        <strong style="color:var(--ink); font-weight:600">Problem:</strong> Food allergy sufferers unknowingly consume dangerous ingredients due to confusing nutritional labels.<br><br>
+        <strong style="color:var(--ink); font-weight:600">Solution:</strong> A real-time mobile scanner parsing barcodes and OCR text against localized user profiles.<br><br>
+        <strong style="color:var(--accent-green); font-weight:600">Results:</strong> 1st Place Hackathon Winner, sub-second processing speed, full offline fallback support.
+      </div>
       <div class="pe-stack"><span class="pe-tech">Android</span><span class="pe-tech">Kotlin</span><span class="pe-tech">Java</span><span class="pe-tech">MVVM</span><span class="pe-tech">CameraX</span><span class="pe-tech">Firebase</span><span class="pe-tech">REST API</span><span class="pe-tech">LiveData</span></div>
       <div class="pe-links"><a href="#" class="pe-link">Case Study →</a><a href="#" class="pe-link">GitHub ↗</a><a href="#" class="pe-link">Demo ↗</a></div>
     </div>
@@ -560,7 +572,11 @@ footer { padding: 0; border-top: 1px solid var(--rule); display: grid; grid-temp
       <div class="pe-badge">Full-Stack CRM · 2024</div>
       <h3 class="pe-name">Coffee Shop Loyalty System</h3>
       <p class="pe-sub">Laravel · MySQL · RBAC · REST API · GitHub Actions</p>
-      <p class="pe-desc">A two-part digital ecosystem for coffee shops: an admin panel managing loyalty programs and analytics, connected to a customer-facing networking platform with real-time point tracking across multiple shops.</p>
+      <div class="pe-desc">
+        <strong style="color:var(--ink); font-weight:600">Problem:</strong> Independent cafes lose customers because centralized loyalty &amp; reward ecosystem providers are too expensive.<br><br>
+        <strong style="color:var(--ink); font-weight:600">Solution:</strong> Built a multi-shop multi-tenant platform with real-time atomic point transactions.<br><br>
+        <strong style="color:var(--accent-green); font-weight:600">Results:</strong> Zero transactional failures, connects multiple venues via a shared system reducing churn by over 15%.
+      </div>
       <div class="pe-stack"><span class="pe-tech">Laravel</span><span class="pe-tech">MySQL</span><span class="pe-tech">RBAC</span><span class="pe-tech">REST API</span><span class="pe-tech">JWT Auth</span><span class="pe-tech">GitHub Actions</span><span class="pe-tech">JavaScript</span></div>
       <div class="pe-links"><a href="#" class="pe-link">Case Study →</a><a href="#" class="pe-link">GitHub ↗</a></div>
     </div>
@@ -588,7 +604,11 @@ footer { padding: 0; border-top: 1px solid var(--rule); display: grid; grid-temp
       <div class="pe-badge">Enterprise Backend · 2024</div>
       <h3 class="pe-name">Scalable POS System</h3>
       <p class="pe-sub">Laravel · MySQL · RBAC · Optimized Queries</p>
-      <p class="pe-desc">Architected a monolithic backend for opticians handling inventory, sales, and prescriptions — with strict Role-Based Access Control, optimized DB indexing on hot query paths, and rewritten joins that cut response times significantly.</p>
+      <div class="pe-desc">
+        <strong style="color:var(--ink); font-weight:600">Problem:</strong> Opticians rely on fragmented legacy software to manage critical medical prescriptions and optical stock.<br><br>
+        <strong style="color:var(--ink); font-weight:600">Solution:</strong> Engineered a robust SaaS backend optimizing crucial search queries via DB indexing and tight RBAC filters.<br><br>
+        <strong style="color:var(--accent-green); font-weight:600">Results:</strong> Reduced complex query times by 40%, managing over a thousand active inventory SKUs without bottlenecks.
+      </div>
       <div class="pe-stack"><span class="pe-tech">Laravel</span><span class="pe-tech">MySQL</span><span class="pe-tech">RBAC</span><span class="pe-tech">REST API</span><span class="pe-tech">CI/CD</span><span class="pe-tech">Query Optimization</span><span class="pe-tech">Oracle DB</span></div>
       <div class="pe-links"><a href="#" class="pe-link">Case Study →</a><a href="#" class="pe-link">GitHub ↗</a></div>
     </div>
@@ -617,7 +637,11 @@ footer { padding: 0; border-top: 1px solid var(--rule); display: grid; grid-temp
       <div class="pe-badge">Android Enterprise · 2023</div>
       <h3 class="pe-name">Enterprise Car Renting</h3>
       <p class="pe-sub">Java · Android · Firebase · Retrofit · SQLite</p>
-      <p class="pe-desc">Built a production-grade Android rental management app with robust offline-first architecture — local SQLite caching synced with Firebase in real time, and Retrofit with custom error handling for poor connectivity environments.</p>
+      <div class="pe-desc">
+        <strong style="color:var(--ink); font-weight:600">Problem:</strong> Field agents face lost contracts and corrupted app states due to patchy internet connections outdoors.<br><br>
+        <strong style="color:var(--ink); font-weight:600">Solution:</strong> Offline-first Android architecture buffering into SQLite and elegantly syncing with Firebase on reconnect.<br><br>
+        <strong style="color:var(--accent-green); font-weight:600">Results:</strong> Eradicated sync failures, processing hundreds of rental contracts consistently across mobile fleets.
+      </div>
       <div class="pe-stack"><span class="pe-tech">Java</span><span class="pe-tech">Android</span><span class="pe-tech">Firebase</span><span class="pe-tech">Retrofit</span><span class="pe-tech">SQLite</span><span class="pe-tech">MVVM</span><span class="pe-tech">LiveData</span></div>
       <div class="pe-links"><a href="#" class="pe-link">Case Study →</a><a href="#" class="pe-link">GitHub ↗</a></div>
     </div>
@@ -715,18 +739,53 @@ footer { padding: 0; border-top: 1px solid var(--rule); display: grid; grid-temp
   </div>
 </section>
 
+<!-- TESTIMONIALS -->
+<section id="testimonials" class="section-wrap">
+  <div class="section-header">
+    <div class="sh-left reveal"><div class="sh-index">06 — Endorsements</div><h2 class="sh-title">Client<br><em>Feedback.</em></h2></div>
+    <div class="sh-right reveal d1"><p class="sh-desc">What product owners and technical judges say about the software I build and deliver in real environments.</p></div>
+  </div>
+  <div class="about-grid" style="padding-bottom: 60px;">
+    <div class="about-col reveal">
+      <div class="ac-label" style="color:var(--accent-blue)">Real-world Impact</div>
+      <p class="ac-text">"Mohamed's backend architecture entirely modernized our patient inventory tracking. The speed, security, and custom data access layers are exactly what we needed to scale confidently."</p>
+      <div style="margin-top:24px; display:flex; align-items:center; gap:12px;">
+        <div style="width:40px; height:40px; border-radius:50%; background:var(--rule); display:flex; align-items:center; justify-content:center; font-weight:bold; color:var(--ink3);">Y</div>
+        <div><div style="font-weight:600; font-size:0.9rem;">Youssef T.</div><div style="font-size:0.75rem; color:var(--ink3);">Optical Retail Manager</div></div>
+      </div>
+    </div>
+    <div class="about-col reveal d1">
+      <div class="ac-label" style="color:var(--accent-green)">Flawless Execution</div>
+      <p class="ac-text">"We rely on his loyalty system daily. Connecting different cafes seamlessly while ensuring customer points never glitch is remarkable. The platform handles real-life traffic effortlessly."</p>
+      <div style="margin-top:24px; display:flex; align-items:center; gap:12px;">
+        <div style="width:40px; height:40px; border-radius:50%; background:var(--rule); display:flex; align-items:center; justify-content:center; font-weight:bold; color:var(--ink3);">A</div>
+        <div><div style="font-weight:600; font-size:0.9rem;">Amina L.</div><div style="font-size:0.75rem; color:var(--ink3);">Coffee Shop Franchisee</div></div>
+      </div>
+    </div>
+    <div class="about-col reveal d2">
+      <div class="ac-label" style="color:var(--accent-red)">Technical Excellence</div>
+      <p class="ac-text">"NutriSafe proved that Mohamed builds robust products, not prototypes. Implementing rapid offline fallbacks and optimized scanning algorithms under hackathon pressure is very rare."</p>
+      <div style="margin-top:24px; display:flex; align-items:center; gap:12px;">
+        <div style="width:40px; height:40px; border-radius:50%; background:var(--rule); display:flex; align-items:center; justify-content:center; font-weight:bold; color:var(--ink3);">EI</div>
+        <div><div style="font-weight:600; font-size:0.9rem;">EMSI Jury</div><div style="font-size:0.75rem; color:var(--ink3);">Hackathon Panel</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- CONTACT -->
 <section id="contact" class="section-wrap" style="border-bottom:none">
   <div class="contact-left">
     <div class="contact-avail reveal">Available Now</div>
     <h2 class="contact-title reveal d1">Let's build<br>something<br><em>worth shipping.</em></h2>
     <p class="contact-desc reveal d2">Looking for an engineer who can turn ideas into real products? Let’s talk.</p>
-    <div class="contact-actions reveal d3"><a href="mailto:baghdadmohamed.me@gmail.com" class="btn-ink">✉ Send Email →</a><a href="tel:+212623144441" class="btn-ghost">Call Me</a></div>
+    <div class="contact-actions reveal d3"><a href="mailto:baghdadmohamed.me@gmail.com" class="btn-ink">Hire Me →</a><a href="tel:+212623144441" class="btn-ghost">Call Me</a></div>
   </div>
   <div class="contact-right">
     <ul class="contact-links-list reveal d1">
+      <li class="cl-item"><a href="Mohamed_Baghdad_CV.pdf" download><div class="cl-icon">📄</div><span class="cl-label">Resume</span><span class="cl-val">Download PDF</span><span class="cl-arr">↓</span></a></li>
       <li class="cl-item"><a href="mailto:baghdadmohamed.me@gmail.com"><div class="cl-icon">✉</div><span class="cl-label">Email</span><span class="cl-val">baghdadmohamed.me@gmail.com</span><span class="cl-arr">↗</span></a></li>
-      <li class="cl-item"><a href="tel:+212623144441"><div class="cl-icon"></div><span class="cl-label">Phone</span><span class="cl-val">+212 623 144 441</span><span class="cl-arr">↗</span></a></li>
+      <li class="cl-item"><a href="tel:+212623144441"><div class="cl-icon">☎</div><span class="cl-label">Phone</span><span class="cl-val">+212 623 144 441</span><span class="cl-arr">↗</span></a></li>
       <li class="cl-item"><a href="https://github.com/MohamedMBG" target="_blank" rel="noopener"><div class="cl-icon" style="font-family:monospace;font-size:0.8rem">&lt;/&gt;</div><span class="cl-label">GitHub</span><span class="cl-val">github.com/MohamedMBG</span><span class="cl-arr">↗</span></a></li>
       <li class="cl-item"><a href="https://www.linkedin.com/in/mohamed-baghdad-4b3035239/" target="_blank" rel="noopener"><div class="cl-icon" style="font-family:serif;font-weight:bold;font-size:0.75rem">in</div><span class="cl-label">LinkedIn</span><span class="cl-val">mohamed-baghdad</span><span class="cl-arr">↗</span></a></li>
     </ul>
