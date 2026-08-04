@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Work &amp; Client Builds — Mohamed Baghdad</title>
+  <meta name="description" content="Product and client builds by Mohamed Baghdad: point-of-sale, dashboard, and mobile projects, with live links where hosted and user manuals or screenshots where not.">
+  <meta name="theme-color" content="#f1f0e8">
+  <link rel="canonical" href="https://mohamedbaghdad.online/work-mohamed-baghdad.html">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Work &amp; Client Builds — Mohamed Baghdad">
+  <meta property="og:description" content="Product and client builds, with live links where hosted and manuals or screenshots where not.">
+  <meta property="og:url" content="https://mohamedbaghdad.online/work-mohamed-baghdad.html">
+  <meta property="og:image" content="https://mohamedbaghdad.online/assets/profile.jpg">
+  <link rel="stylesheet" href="assets/styles.css">
+  <style>
+    .screenshot-shell { padding: 6px; border: 1px solid rgba(17, 23, 18, 0.08); border-radius: 18px; background: var(--shell); }
+    .screenshot-shell img { display: block; width: 100%; height: auto; border-radius: 12px; }
+    .doc-links { margin-top: 18px; display: flex; gap: 18px; flex-wrap: wrap; }
+    .doc-link { display: inline-flex; align-items: center; gap: 9px; color: var(--ink); font-family: var(--mono); font-size: 0.7rem; text-decoration: none; }
+    .doc-link::before { content: '↓'; color: var(--signal); }
+    .unhosted-label { color: var(--dim); font-family: var(--mono); font-size: 0.66rem; display: inline-flex; align-items: center; gap: 8px; }
+    .unhosted-label .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--dim); opacity: 0.55; display: inline-block; }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header"><div class="nav-shell"><nav class="nav-core" aria-label="Primary navigation">
+    <a class="brand" href="index.html" aria-label="Mohamed Baghdad, home"><span class="brand-mark">MB</span><span class="brand-name">Mohamed Baghdad</span></a>
+    <ul class="nav-links"><li><a href="index.html">Overview</a></li><li><a href="projects-mohamed-baghdad.html">Systems</a></li><li><a href="work-mohamed-baghdad.html" aria-current="page">Work</a></li><li><a href="about-mohamed-baghdad.html">About</a></li><li><a href="assets/French_BAGHDAD_Mohamed_CV.pdf" download>Résumé</a></li><li><a class="nav-cta" href="contact-mohamed-baghdad.html">Start a conversation <span class="arrow-box">↗</span></a></li></ul>
+    <button class="menu-button" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open navigation"><span></span><span></span></button>
+  </nav></div></header>
+  <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation"><a href="index.html">Overview</a><a href="projects-mohamed-baghdad.html">Systems</a><a href="work-mohamed-baghdad.html">Work</a><a href="about-mohamed-baghdad.html">About</a><a href="contact-mohamed-baghdad.html">Contact</a></nav>
+
+  <main class="page-main" id="main">
+    <section class="page-hero">
+      <div class="container page-hero-grid">
+        <div><div class="kicker reveal"><span class="live-dot"></span> Product &amp; client builds</div><h1 class="reveal">Work, <span class="outline">shipped</span> and shown.</h1></div>
+        <aside class="page-hero-aside reveal"><p>Hosted work links straight to the live product. Client and prototype builds without a public URL are shown through real screenshots and, where I authored one, the user manual I delivered with the product.</p><div class="proof-line"><span>PRODUCT + CLIENT WORK</span><span>2023—2026</span></div></aside>
+      </div>
+    </section>
+
+    <article class="case-study" id="optometrix">
+      <div class="container case-grid">
+        <aside class="case-sidebar reveal"><span class="project-index">01 / retail POS</span><h2>OpticPOS</h2><p>A React point-of-sale and operations app for optical stores: checkout, prescriptions, lab orders, inventory, appointments, and reports, in French with MAD pricing.</p><span class="unhosted-label"><span class="dot"></span> Client build · not publicly hosted</span><ul class="project-tech"><li>React</li><li>SQLite</li><li>Radix UI</li></ul>
+          <div class="doc-links"><a class="doc-link" href="assets/OpticPOS-Manual.pdf" target="_blank" rel="noreferrer">System manual (PDF)</a><a class="doc-link" href="assets/OpticPOS-User-Guide.pdf" target="_blank" rel="noreferrer">User guide (PDF)</a></div>
+        </aside>
+        <div class="case-content">
+          <div class="screenshot-shell reveal"><img src="assets/optician_pos.png" alt="OpticPOS checkout screen with frame catalog, cart, and payment total for an optical store" loading="lazy"></div>
+        </div>
+      </div>
+    </article>
+
+    <article class="case-study" id="atlasrent">
+      <div class="container case-grid">
+        <aside class="case-sidebar reveal"><span class="project-index">02 / SaaS dashboard</span><h2>AtlasRent</h2><p>A Moroccan car-rental management SaaS prototype: revenue, expenses, fleet occupancy, and per-vehicle profitability behind an owner login, on top of a public booking site.</p><span class="unhosted-label"><span class="dot"></span> Frontend prototype · not publicly hosted</span><ul class="project-tech"><li>React</li><li>TanStack</li><li>RTL/i18n</li></ul>
+        </aside>
+        <div class="case-content">
+          <div class="screenshot-shell reveal"><img src="assets/car_renting.png" alt="AtlasRent owner dashboard showing daily and monthly revenue, expenses, unpaid balances, and reservation origin" loading="lazy"></div>
+        </div>
+      </div>
+    </article>
+
+    <article class="case-study" id="beanloyal-web">
+      <div class="container case-grid">
+        <aside class="case-sidebar reveal"><span class="project-index">03 / marketing site</span><h2>Bean Loyal</h2><p>The public landing page for the BeanLoyal coffee-shop loyalty app: how the points system works, for shop owners and for customers, with a QR scan-to-earn flow.</p><span class="unhosted-label"><span class="dot"></span> Landing page · not publicly hosted</span><ul class="project-tech"><li>TanStack Start</li><li>TypeScript</li></ul>
+        </aside>
+        <div class="case-content">
+          <div class="screenshot-shell reveal"><img src="assets/admin_loyalty.png" alt="Bean Loyal landing page hero showing the points card and QR scan-to-earn widget" loading="lazy"></div>
+        </div>
+      </div>
+    </article>
+
+    <section class="cta-section"><div class="container"><span class="section-index reveal">04 / more on GitHub</span><h2 class="reveal">Want the <a href="contact-mohamed-baghdad.html">source</a>?</h2><div class="cta-meta reveal"><span>Client repositories shown here stay private by agreement</span><span>Casablanca · Remote</span></div></div></section>
+  </main>
+
+  <footer class="site-footer"><div class="container footer-inner"><span>© <span data-year></span> Mohamed Baghdad</span><div class="footer-links"><a href="https://github.com/MohamedMBG" target="_blank" rel="noreferrer">GitHub</a><a href="contact-mohamed-baghdad.html">Contact</a></div></div></footer>
+  <script src="assets/site.js" defer></script>
+</body>
+</html>
