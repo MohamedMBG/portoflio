@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -13,61 +13,73 @@
   <meta property="og:description" content="Product and client builds, with live links where hosted and manuals or screenshots where not.">
   <meta property="og:url" content="https://mohamedbaghdad.online/work-mohamed-baghdad.html">
   <meta property="og:image" content="https://mohamedbaghdad.online/assets/profile.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,300..800&amp;family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,400&amp;display=swap">
   <link rel="stylesheet" href="assets/styles.css">
-  <style>
-    .screenshot-shell { padding: 6px; border: 1px solid rgba(17, 23, 18, 0.08); border-radius: 18px; background: var(--shell); }
-    .screenshot-shell img { display: block; width: 100%; height: auto; border-radius: 12px; }
-    .doc-links { margin-top: 18px; display: flex; gap: 18px; flex-wrap: wrap; }
-    .doc-link { display: inline-flex; align-items: center; gap: 9px; color: var(--ink); font-family: var(--mono); font-size: 0.7rem; text-decoration: none; }
-    .doc-link::before { content: '↓'; color: var(--signal); }
-    .unhosted-label { color: var(--dim); font-family: var(--mono); font-size: 0.66rem; display: inline-flex; align-items: center; gap: 8px; }
-    .unhosted-label .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--dim); opacity: 0.55; display: inline-block; }
-  </style>
+  <script>
+    // Applied before first paint so a dark-theme visitor never sees a light flash.
+    try {
+      var stored = localStorage.getItem('mb-theme');
+      if (stored === 'dark' || stored === 'light') document.documentElement.dataset.theme = stored;
+      var dark = stored === 'dark' || (!stored && matchMedia('(prefers-color-scheme: dark)').matches);
+      document.querySelector('meta[name="theme-color"]').content = dark ? '#0c110e' : '#f1f0e8';
+    } catch (error) { /* storage blocked: fall back to the system preference */ }
+  </script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
+  <div class="scroll-progress" aria-hidden="true"></div>
   <header class="site-header"><div class="nav-shell"><nav class="nav-core" aria-label="Primary navigation">
-    <a class="brand" href="index.html" aria-label="Mohamed Baghdad, home"><span class="brand-mark">MB</span><span class="brand-name">Mohamed Baghdad</span></a>
-    <ul class="nav-links"><li><a href="index.html">Overview</a></li><li><a href="projects-mohamed-baghdad.html">Systems</a></li><li><a href="work-mohamed-baghdad.html" aria-current="page">Work</a></li><li><a href="about-mohamed-baghdad.html">About</a></li><li><a href="assets/French_BAGHDAD_Mohamed_CV.pdf" download>Résumé</a></li><li><a class="nav-cta" href="contact-mohamed-baghdad.html">Start a conversation <span class="arrow-box">↗</span></a></li></ul>
-    <button class="menu-button" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open navigation"><span></span><span></span></button>
+    <a class="brand" href="index.html" aria-label="Mohamed Baghdad, home"><span class="brand-mark" aria-hidden="true">MB</span><span class="brand-name">Mohamed Baghdad</span></a>
+    <div class="nav-right">
+      <ul class="nav-links"><li><a href="index.html">Overview</a></li><li><a href="projects-mohamed-baghdad.html">Systems</a></li><li><a href="work-mohamed-baghdad.html" aria-current="page">Work</a></li><li><a href="about-mohamed-baghdad.html">About</a></li><li><a href="assets/French_BAGHDAD_Mohamed_CV.pdf" download>Résumé</a></li><li><a class="nav-cta" href="contact-mohamed-baghdad.html">Start a conversation <span class="arrow-box" aria-hidden="true">↗</span></a></li></ul>
+      <div class="nav-tools">
+        <button class="theme-toggle" type="button" aria-pressed="false" aria-label="Switch to dark theme">
+          <svg class="icon-light" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+          <svg class="icon-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.8 6.8 0 0 0 10.5 10.5Z"/></svg>
+        </button>
+        <button class="menu-button" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open navigation"><span></span><span></span></button>
+      </div>
+    </div>
   </nav></div></header>
-  <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation"><a href="index.html">Overview</a><a href="projects-mohamed-baghdad.html">Systems</a><a href="work-mohamed-baghdad.html">Work</a><a href="about-mohamed-baghdad.html">About</a><a href="contact-mohamed-baghdad.html">Contact</a></nav>
+  <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation"><a href="index.html">Overview</a><a href="projects-mohamed-baghdad.html">Systems</a><a href="work-mohamed-baghdad.html">Work</a><a href="about-mohamed-baghdad.html">About</a><a href="assets/French_BAGHDAD_Mohamed_CV.pdf" download>Résumé</a><a href="contact-mohamed-baghdad.html">Contact</a></nav>
 
   <main class="page-main" id="main">
     <section class="page-hero">
       <div class="container page-hero-grid">
-        <div><div class="kicker reveal"><span class="live-dot"></span> Product &amp; client builds</div><h1 class="reveal">Work, <span class="outline">shipped</span> and shown.</h1></div>
-        <aside class="page-hero-aside reveal"><p>Hosted work links straight to the live product. Client and prototype builds without a public URL are shown through real screenshots and, where I authored one, the user manual I delivered with the product.</p><div class="proof-line"><span>PRODUCT + CLIENT WORK</span><span>2023—2026</span></div></aside>
+        <div><div class="kicker reveal"><span class="live-dot" aria-hidden="true"></span> Product &amp; client builds</div><h1 class="reveal">Work, <span class="outline">shipped</span> and shown.</h1></div>
+        <div class="page-hero-aside reveal"><p>Hosted work links straight to the live product. Client and prototype builds without a public URL are shown through real screenshots and, where I authored one, the user manual I delivered with the product.</p><div class="proof-line"><span>PRODUCT + CLIENT WORK</span><span>2023—2026</span></div></div>
       </div>
     </section>
 
     <article class="case-study" id="optometrix">
       <div class="container case-grid">
-        <aside class="case-sidebar reveal"><span class="project-index">01 / retail POS</span><h2>OpticPOS</h2><p>A React point-of-sale and operations app for optical stores: checkout, prescriptions, lab orders, inventory, appointments, and reports, in French with MAD pricing.</p><span class="unhosted-label"><span class="dot"></span> Client build · not publicly hosted</span><ul class="project-tech"><li>React</li><li>SQLite</li><li>Radix UI</li></ul>
+        <div class="case-sidebar reveal"><span class="project-index">01 / retail POS</span><h2>OpticPOS</h2><p>A React point-of-sale and operations app for optical stores: checkout, prescriptions, lab orders, inventory, appointments, and reports, in French with MAD pricing.</p><span class="unhosted-label"><span class="dot" aria-hidden="true"></span> Client build · not publicly hosted</span><ul class="project-tech"><li>React</li><li>SQLite</li><li>Radix UI</li></ul>
           <div class="doc-links"><a class="doc-link" href="assets/OpticPOS-Manual.pdf" target="_blank" rel="noreferrer">System manual (PDF)</a><a class="doc-link" href="assets/OpticPOS-User-Guide.pdf" target="_blank" rel="noreferrer">User guide (PDF)</a></div>
-        </aside>
+        </div>
         <div class="case-content">
-          <div class="screenshot-shell reveal"><img src="assets/optician_pos.png" alt="OpticPOS checkout screen with frame catalog, cart, and payment total for an optical store" loading="lazy"></div>
+          <div class="screenshot-shell reveal"><img src="assets/optician_pos.png" alt="OpticPOS checkout screen with frame catalog, cart, and payment total for an optical store" width="1500" height="820" loading="lazy" decoding="async"></div>
         </div>
       </div>
     </article>
 
     <article class="case-study" id="atlasrent">
       <div class="container case-grid">
-        <aside class="case-sidebar reveal"><span class="project-index">02 / SaaS dashboard</span><h2>AtlasRent</h2><p>A Moroccan car-rental management SaaS prototype: revenue, expenses, fleet occupancy, and per-vehicle profitability behind an owner login, on top of a public booking site.</p><span class="unhosted-label"><span class="dot"></span> Frontend prototype · not publicly hosted</span><ul class="project-tech"><li>React</li><li>TanStack</li><li>RTL/i18n</li></ul>
-        </aside>
+        <div class="case-sidebar reveal"><span class="project-index">02 / SaaS dashboard</span><h2>AtlasRent</h2><p>A Moroccan car-rental management SaaS prototype: revenue, expenses, fleet occupancy, and per-vehicle profitability behind an owner login, on top of a public booking site.</p><span class="unhosted-label"><span class="dot" aria-hidden="true"></span> Frontend prototype · not publicly hosted</span><ul class="project-tech"><li>React</li><li>TanStack</li><li>RTL/i18n</li></ul>
+        </div>
         <div class="case-content">
-          <div class="screenshot-shell reveal"><img src="assets/car_renting.png" alt="AtlasRent owner dashboard showing daily and monthly revenue, expenses, unpaid balances, and reservation origin" loading="lazy"></div>
+          <div class="screenshot-shell reveal"><img src="assets/car_renting.png" alt="AtlasRent owner dashboard showing daily and monthly revenue, expenses, unpaid balances, and reservation origin" width="1400" height="1310" loading="lazy" decoding="async"></div>
         </div>
       </div>
     </article>
 
     <article class="case-study" id="beanloyal-web">
       <div class="container case-grid">
-        <aside class="case-sidebar reveal"><span class="project-index">03 / marketing site</span><h2>Bean Loyal</h2><p>The public landing page for the BeanLoyal coffee-shop loyalty app: how the points system works, for shop owners and for customers, with a QR scan-to-earn flow.</p><span class="unhosted-label"><span class="dot"></span> Landing page · not publicly hosted</span><ul class="project-tech"><li>TanStack Start</li><li>TypeScript</li></ul>
-        </aside>
+        <div class="case-sidebar reveal"><span class="project-index">03 / marketing site</span><h2>Bean Loyal</h2><p>The public landing page for the BeanLoyal coffee-shop loyalty app: how the points system works, for shop owners and for customers, with a QR scan-to-earn flow.</p><span class="unhosted-label"><span class="dot" aria-hidden="true"></span> Landing page · not publicly hosted</span><ul class="project-tech"><li>TanStack Start</li><li>TypeScript</li></ul>
+        </div>
         <div class="case-content">
-          <div class="screenshot-shell reveal"><img src="assets/admin_loyalty.png" alt="Bean Loyal landing page hero showing the points card and QR scan-to-earn widget" loading="lazy"></div>
+          <div class="screenshot-shell reveal"><img src="assets/admin_loyalty.png" alt="Bean Loyal landing page hero showing the points card and QR scan-to-earn widget" width="1400" height="1000" loading="lazy" decoding="async"></div>
         </div>
       </div>
     </article>
