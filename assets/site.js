@@ -8,7 +8,6 @@
   /* ---- Theme ---------------------------------------------------------- */
 
   const THEME_KEY = 'mb-theme';
-  const systemDark = window.matchMedia('(prefers-color-scheme: dark)');
 
   const readStoredTheme = () => {
     try {
@@ -18,13 +17,14 @@
     }
   };
 
-  const effectiveTheme = () => root.dataset.theme || (systemDark.matches ? 'dark' : 'light');
+  // Dark is the house default; only an explicit choice switches to light.
+  const effectiveTheme = () => root.dataset.theme || 'dark';
 
   // Keep the browser UI colour in step with the painted background.
   const syncThemeColor = () => {
     const meta = document.querySelector('meta[name="theme-color"]');
     if (!meta) return;
-    meta.setAttribute('content', effectiveTheme() === 'dark' ? '#0c110e' : '#f1f0e8');
+    meta.setAttribute('content', effectiveTheme() === 'dark' ? '#141414' : '#fafafa');
   };
 
   const applyTheme = (theme) => {
@@ -42,11 +42,6 @@
   };
 
   applyTheme(readStoredTheme());
-
-  // Follow the OS while the visitor has not made an explicit choice.
-  systemDark.addEventListener('change', () => {
-    if (!readStoredTheme()) applyTheme(null);
-  });
 
   document.querySelectorAll('.theme-toggle').forEach((button) => {
     button.addEventListener('click', () => {
@@ -212,6 +207,115 @@
   });
 
 
+
+  /* ---- Hero word rotator ----------------------------------------------- */
+
+  document.querySelectorAll('.hero-rotator[data-words]').forEach((rotator) => {
+    const words = rotator.dataset.words.split('|');
+    const word = rotator.querySelector('.hero-word');
+    // Screen readers get the whole list once instead of a changing word.
+    rotator.setAttribute('aria-label', words.join(', '));
+    word.setAttribute('aria-hidden', 'true');
+    if (reduceMotion.matches || words.length < 2) return;
+
+    let index = 0;
+    setInterval(() => {
+      word.classList.remove('is-in');
+      word.classList.add('is-out');
+      word.addEventListener('animationend', () => {
+        index = (index + 1) % words.length;
+        word.textContent = words[index];
+        word.classList.remove('is-out');
+        word.classList.add('is-in');
+      }, { once: true });
+    }, 2600);
+  });
+
+  /* ---- Hero photo: colour follows the pointer -------------------------- */
+
+  const hero = document.querySelector('.home-hero');
+  const heroColor = hero?.querySelector('.home-hero-color');
+
+  if (heroColor && !reduceMotion.matches && window.matchMedia('(hover: hover)').matches) {
+    const RADIUS = 260;
+    // Current values ease toward targets each frame so the spotlight trails the pointer.
+    let x = 0, y = 0, r = 0, tx = 0, ty = 0, tr = 0, running = false;
+
+    const tick = () => {
+      x += (tx - x) * 0.14;
+      y += (ty - y) * 0.14;
+      r += (tr - r) * 0.1;
+      heroColor.style.setProperty('--mx', `${x.toFixed(1)}px`);
+      heroColor.style.setProperty('--my', `${y.toFixed(1)}px`);
+      heroColor.style.setProperty('--r', r.toFixed(1));
+      if (Math.abs(tx - x) + Math.abs(ty - y) + Math.abs(tr - r) > 0.5) {
+        requestAnimationFrame(tick);
+      } else {
+        running = false;
+      }
+    };
+
+    const kick = () => {
+      if (running) return;
+      running = true;
+      requestAnimationFrame(tick);
+    };
+
+    hero.addEventListener('pointermove', (event) => {
+      const box = heroColor.getBoundingClientRect();
+      tx = event.clientX - box.left;
+      ty = event.clientY - box.top;
+      const inside = tx >= 0 && ty >= 0 && tx <= box.width && ty <= box.height;
+      // Open where the pointer enters instead of sliding in from the last spot.
+      if (r < 1) { x = tx; y = ty; }
+      tr = inside ? RADIUS : 0;
+      hero.classList.toggle('is-lit', inside);
+      kick();
+    });
+    hero.addEventListener('pointerleave', () => {
+      tr = 0;
+      hero.classList.remove('is-lit');
+      kick();
+    });
+  }
+
+  /* ---- Statement scrub: words light up as the paragraph scrolls past ---- */
+
+  const scrubs = [...document.querySelectorAll('[data-scrub]')].map((element) => {
+    const text = element.textContent.trim();
+    const label = document.createElement('span');
+    label.className = 'visually-hidden';
+    label.textContent = text;
+    element.replaceChildren(label);
+    text.split(/\s+/).forEach((w) => {
+      const span = document.createElement('span');
+      span.className = 'w';
+      span.setAttribute('aria-hidden', 'true');
+      span.textContent = w;
+      element.append(span, ' ');
+    });
+    return { element, words: element.querySelectorAll('.w') };
+  });
+
+  if (scrubs.length && !reduceMotion.matches) {
+    let scrubTicking = false;
+    const scrub = () => {
+      scrubTicking = false;
+      const vh = window.innerHeight;
+      scrubs.forEach(({ element, words }) => {
+        const box = element.getBoundingClientRect();
+        const ratio = Math.min(Math.max((vh * 0.85 - box.top) / (box.height + vh * 0.25), 0), 1);
+        const lit = Math.round(ratio * words.length);
+        words.forEach((w, i) => w.classList.toggle('on', i < lit));
+      });
+    };
+    window.addEventListener('scroll', () => {
+      if (scrubTicking) return;
+      scrubTicking = true;
+      requestAnimationFrame(scrub);
+    }, { passive: true });
+    scrub();
+  }
 
   /* ---- Footer year ------------------------------------------------------ */
 

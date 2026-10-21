@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Mohamed Baghdad — Backend &amp; Cloud Engineer</title>
   <meta name="description" content="Mohamed Baghdad builds dependable backend systems, cloud-ready services, and operational tooling with Java, Spring Boot, PostgreSQL, Docker, and event-driven architecture.">
-  <meta name="theme-color" content="#f1f0e8">
+  <meta name="theme-color" content="#141414">
   <link rel="canonical" href="https://mohamedbaghdad.online/">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <meta property="og:type" content="website">
@@ -18,14 +18,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;family=Archivo:wdth,wght@75..125,300..800&amp;family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,400&amp;display=swap">
   <link rel="stylesheet" href="assets/styles.css">
-  <link rel="preload" as="image" href="assets/hero-mohamed-auditorium.png" fetchpriority="high">
   <script>
     // Applied before first paint so a dark-theme visitor never sees a light flash.
     try {
       var stored = localStorage.getItem('mb-theme');
       if (stored === 'dark' || stored === 'light') document.documentElement.dataset.theme = stored;
-      var dark = stored === 'dark' || (!stored && matchMedia('(prefers-color-scheme: dark)').matches);
-      document.querySelector('meta[name="theme-color"]').content = dark ? '#0c110e' : '#f1f0e8';
+      var dark = stored !== 'light';
+      document.querySelector('meta[name="theme-color"]').content = dark ? '#141414' : '#fafafa';
     } catch (error) { /* storage blocked: fall back to the system preference */ }
   </script>
   <script type="application/ld+json">
@@ -58,14 +57,13 @@
     <div class="nav-shell">
       <nav class="nav-core" aria-label="Primary navigation">
         <a class="brand" href="index.html" aria-label="Mohamed Baghdad, home">
-          <span class="brand-mark" aria-hidden="true">MB</span>
+          <span class="brand-mark" aria-hidden="true">M/B</span>
           <span class="brand-name">Mohamed Baghdad</span>
         </a>
         <div class="nav-right">
           <ul class="nav-links">
             <li><a href="index.html" aria-current="page">Overview</a></li>
-            <li><a href="projects-mohamed-baghdad.html">Systems</a></li>
-            <li><a href="work-mohamed-baghdad.html">Work</a></li>
+            <li><a href="projects-mohamed-baghdad.html">Work</a></li>
             <li><a href="about-mohamed-baghdad.html">About</a></li>
             <li><a href="assets/French_BAGHDAD_Mohamed_CV.pdf" download>Résumé</a></li>
             <li><a class="nav-cta" href="contact-mohamed-baghdad.html">Start a conversation <span class="arrow-box" aria-hidden="true">↗</span></a></li>
@@ -86,248 +84,119 @@
 
   <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation">
     <a href="index.html">Overview</a>
-    <a href="projects-mohamed-baghdad.html">Systems</a>
-    <a href="work-mohamed-baghdad.html">Work</a>
+    <a href="projects-mohamed-baghdad.html">Work</a>
     <a href="about-mohamed-baghdad.html">About</a>
     <a href="assets/French_BAGHDAD_Mohamed_CV.pdf" download>Résumé</a>
     <a href="contact-mohamed-baghdad.html">Contact</a>
   </nav>
 
   <main class="page-main" id="main">
-    <section class="hero hero-monograph" aria-labelledby="hero-title">
-      <div class="container hero-monograph-grid">
-        <!-- Left: Engineering Monograph Column -->
-        <div class="hero-monograph-content">
-          <div class="hero-meta-strip reveal">
-            <span class="meta-location">CASABLANCA, MA [33.57° N, 7.58° W]</span>
-            <span class="meta-divider" aria-hidden="true">/</span>
-            <span class="meta-status"><span class="live-dot" aria-hidden="true"></span> OPEN TO BACKEND &amp; CLOUD ROLES</span>
+    <section class="home-hero" aria-labelledby="hero-title">
+      <img class="home-hero-bg" src="assets/hero-mohamed-auditorium.png" alt="" width="1080" height="1440" fetchpriority="high" decoding="async">
+      <img class="home-hero-bg home-hero-color" src="assets/hero-mohamed-auditorium.png" alt="" width="1080" height="1440" decoding="async" aria-hidden="true">
+      <div class="container home-hero-inner">
+        <p class="label hero-status"><span class="live-dot" aria-hidden="true"></span> Open to backend &amp; cloud roles <span class="hero-status-sep" aria-hidden="true">/</span> Casablanca · GMT+1</p>
+        <h1 id="hero-title" class="home-hero-title">
+          <span class="hero-line"><span class="hero-line-inner">I build <span class="hero-rotator" data-words="backends|APIs|pipelines|platforms|services"><span class="hero-word">backends</span></span></span></span>
+          <span class="hero-line"><span class="hero-line-inner">people rely on.</span></span>
+        </h1>
+        <div class="home-hero-foot">
+          <p>Backend &amp; cloud engineer building dependable services with Java 21, Spring Boot, PostgreSQL, Docker and Kafka.</p>
+          <div class="hero-actions-stack">
+            <a class="label-link" href="#systems">Selected work <span class="label-glyph" aria-hidden="true">↓</span></a>
+            <a class="label-link" href="assets/French_BAGHDAD_Mohamed_CV.pdf" download>Download résumé <span class="label-glyph" aria-hidden="true">▷</span></a>
           </div>
-
-          <h1 id="hero-title" class="hero-monograph-title reveal">
-            Engineering the layers<br>users never see<span class="signal" aria-hidden="true">.</span>
-          </h1>
-
-          <p class="hero-monograph-lead reveal">
-            I build dependable backend systems, cloud-ready services, and distributed data pipelines with Java 21, Spring Boot, PostgreSQL, Docker, and Apache Kafka. Designed for concurrency safety, idempotency, and operational resilience under load.
-          </p>
-
-          <!-- Authentic Engineering Spec Grid -->
-          <div class="hero-spec-grid reveal">
-            <div class="spec-col">
-              <span class="spec-index">01 / RUNTIME</span>
-              <strong class="spec-value">Java 21 LTS</strong>
-              <span class="spec-sub">Spring Boot 3 · Microservices</span>
-            </div>
-            <div class="spec-col">
-              <span class="spec-index">02 / STREAMS &amp; DATA</span>
-              <strong class="spec-value">Kafka · Postgres</strong>
-              <span class="spec-sub">Redis · Event Pipelines</span>
-            </div>
-            <div class="spec-col">
-              <span class="spec-index">03 / DISCIPLINE</span>
-              <strong class="spec-value">Resilience First</strong>
-              <span class="spec-sub">Idempotency · Docker</span>
-            </div>
-          </div>
-
-          <!-- Refined Understated Actions -->
-          <div class="hero-monograph-actions reveal">
-            <a class="button-primary" href="#systems">
-              <span>Inspect selected systems</span>
-              <span class="arrow-box" aria-hidden="true">↓</span>
-            </a>
-            <a class="button-ghost" href="assets/French_BAGHDAD_Mohamed_CV.pdf" download>
-              <span>Download résumé [PDF]</span>
-            </a>
-            <a class="text-link" href="contact-mohamed-baghdad.html">Start conversation ↗</a>
-          </div>
-        </div>
-
-        <!-- Right: Gallery-Grade Architectural Framing -->
-        <div class="hero-monograph-media reveal">
-          <figure class="monograph-figure">
-            <div class="monograph-image-shell">
-              <img src="assets/hero-mohamed-auditorium.png" alt="Mohamed Baghdad working on a laptop in an auditorium" width="1080" height="1440" fetchpriority="high" decoding="async">
-            </div>
-            <figcaption class="monograph-caption">
-              <div class="caption-header">
-                <span class="caption-tag">FIG. 01 — WORKING SESSION</span>
-                <span class="caption-loc">CASABLANCA · GMT+1</span>
-              </div>
-              <p class="caption-desc">Mohamed Baghdad · Backend &amp; Cloud Engineer</p>
-            </figcaption>
-          </figure>
         </div>
       </div>
     </section>
 
-    <section class="section" id="systems">
+    <section class="stack-strip" aria-label="Technologies I work with">
+      <div class="container"><p class="label"><span class="asterisk" aria-hidden="true">*</span> Built with &amp; shipped on</p></div>
+      <div class="marquee">
+        <ul class="marquee-track">
+          <li>Java 21</li><li>Spring Boot</li><li>PostgreSQL</li><li>Kafka</li><li>Docker</li><li>Redis</li><li>Prometheus</li><li>Grafana</li><li>TypeScript</li><li>Firebase</li><li>Render</li><li>Vercel</li>
+        </ul>
+        <ul class="marquee-track" aria-hidden="true">
+          <li>Java 21</li><li>Spring Boot</li><li>PostgreSQL</li><li>Kafka</li><li>Docker</li><li>Redis</li><li>Prometheus</li><li>Grafana</li><li>TypeScript</li><li>Firebase</li><li>Render</li><li>Vercel</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="statement container" aria-label="Approach">
+      <p class="statement-text" data-scrub>Turning messy requirements into services that stay understandable under load. Idempotent by default, observable from day one, documented for the next engineer. From request to runtime. From repository to production.</p>
+      <dl class="stats">
+        <div class="stat reveal"><dt>Backend systems</dt><dd>05</dd><span class="stat-index" aria-hidden="true">[01]</span></div>
+        <div class="stat reveal"><dt>Client products</dt><dd>03</dd><span class="stat-index" aria-hidden="true">[02]</span></div>
+        <div class="stat reveal"><dt>Java LTS, daily</dt><dd>21</dd><span class="stat-index" aria-hidden="true">[03]</span></div>
+        <div class="stat reveal"><dt>Programs · EMSI &amp; ALX</dt><dd>02</dd><span class="stat-index" aria-hidden="true">[04]</span></div>
+      </dl>
+    </section>
+
+    <section class="work-index" id="systems" aria-labelledby="work-title">
       <div class="container">
-        <header class="section-head reveal">
-          <span class="section-index">01 / selected systems</span>
-          <h2 class="section-title">Proof over promises.</h2>
-          <p class="section-intro">A shortlist from my GitHub, selected for backend depth, deployment thinking, and evidence of real operational decisions.</p>
+        <header class="work-head reveal">
+          <h2 id="work-title">Selected work<sup>(08)</sup></h2>
+          <a class="label-link" href="projects-mohamed-baghdad.html">All work <span aria-hidden="true">→</span></a>
         </header>
-
-        <div class="project-list">
-          <article class="project-row reveal">
-            <span class="project-index">01 — Public</span>
-            <div class="project-copy">
-              <h3>BeanLoyal backend</h3>
-              <p>A Java 21 loyalty platform API built around safe points transactions. The service combines Firebase authentication with role-aware endpoints, idempotency controls, per-user rate limits, scheduled cleanup, audit trails, and operational metrics.</p>
-              <div class="project-links"><a class="repo-link" href="https://github.com/MohamedMBG/bean_backedn" target="_blank" rel="noreferrer">Inspect repository</a></div>
-              <ul class="project-tech"><li>Spring Boot 3.5</li><li>Firebase Admin</li><li>Bucket4j</li><li>Prometheus</li><li>Docker</li><li>Render</li></ul>
-            </div>
-            <div class="architecture-shell">
-              <div class="architecture">
-                <div class="architecture-top"><span>transaction path</span><span>BL-01</span></div>
-                <div class="arch-flow">
-                  <div class="arch-node"><strong>Firebase</strong><span>identity token</span></div>
-                  <div class="arch-node highlight"><strong>Spring API</strong><span>limits + idempotency</span></div>
-                  <div class="arch-node"><strong>Service layer</strong><span>atomic point flow</span></div>
-                </div>
-                <div class="arch-line"></div>
-                <div class="arch-meta"><div>ACTUATOR / HEALTH</div><div>MICROMETER / METRICS</div><div>SCHEDULED / CLEANUP</div></div>
-              </div>
-            </div>
-          </article>
-
-          <article class="project-row reveal">
-            <span class="project-index">02 — Private build</span>
-            <div class="project-copy">
-              <h3>Im Étoile retail POS</h3>
-              <p>A full-stack point-of-sale system with a server-only database boundary. One build targets local Docker, Render, or Vercel while Neon PostgreSQL remains the source of truth and store-level configuration stays in the environment.</p>
-              <div class="project-links"><span class="private-label">Private client repository · architecture verified</span></div>
-              <ul class="project-tech"><li>TypeScript</li><li>TanStack Start</li><li>Neon Postgres</li><li>Docker Compose</li><li>Vercel</li><li>Render</li></ul>
-            </div>
-            <div class="architecture-shell">
-              <div class="architecture">
-                <div class="architecture-top"><span>deployment topology</span><span>POS-02</span></div>
-                <div class="arch-flow">
-                  <div class="arch-node"><strong>POS client</strong><span>catalog + checkout</span></div>
-                  <div class="arch-node highlight"><strong>Server runtime</strong><span>secret boundary</span></div>
-                  <div class="arch-node"><strong>Neon</strong><span>PostgreSQL truth</span></div>
-                </div>
-                <div class="arch-line"></div>
-                <div class="arch-meta"><div>LOCAL / DOCKER</div><div>EDGE / VERCEL</div><div>SERVICE / RENDER</div></div>
-              </div>
-            </div>
-          </article>
-
-          <article class="project-row reveal">
-            <span class="project-index">03 — Team build</span>
-            <div class="project-copy">
-              <h3>SafeBite</h3>
-              <p>A team-built Android safety engine for food, cosmetics, and medication. It queries multiple product sources concurrently, selects the strongest result, normalizes ingredient data, and evaluates it against a user’s saved allergy profile.</p>
-              <div class="project-links"><a class="repo-link" href="https://github.com/MohamedMBG/SafeBite" target="_blank" rel="noreferrer">Inspect repository</a></div>
-              <ul class="project-tech"><li>Java</li><li>Android</li><li>Retrofit</li><li>ML Kit</li><li>Firebase</li><li>Firestore</li></ul>
-            </div>
-            <div class="architecture-shell">
-              <div class="architecture">
-                <div class="architecture-top"><span>safety verdict path</span><span>SB-03</span></div>
-                <div class="arch-flow">
-                  <div class="arch-node"><strong>Scanner</strong><span>barcode + OCR</span></div>
-                  <div class="arch-node highlight"><strong>Orchestrator</strong><span>parallel API lookup</span></div>
-                  <div class="arch-node"><strong>Verdict</strong><span>allergy matching</span></div>
-                </div>
-                <div class="arch-line"></div>
-                <div class="arch-meta"><div>FOOD / COSMETICS</div><div>MEDICATION / FALLBACKS</div><div>SAFE / WARNING / DANGER</div></div>
-              </div>
-            </div>
-          </article>
-
-          <article class="project-row reveal">
-            <span class="project-index">04 — Full platform</span>
-            <div class="project-copy">
-              <h3>EduLife</h3>
-              <p>A mobile-first learning platform built as a pragmatic modular monolith. Android and React clients share one Spring Boot backend for identity, courses, enrollments, progress, server-scored exams, analytics, and certificates.</p>
-              <div class="project-links"><a class="repo-link" href="https://github.com/MohamedMBG/EduLife" target="_blank" rel="noreferrer">Inspect repository</a></div>
-              <ul class="project-tech"><li>Java 21</li><li>Spring Boot</li><li>PostgreSQL</li><li>Flyway</li><li>Android</li><li>React</li><li>Docker</li></ul>
-            </div>
-            <div class="architecture-shell">
-              <div class="architecture">
-                <div class="architecture-top"><span>learning platform</span><span>EDU-04</span></div>
-                <div class="arch-flow">
-                  <div class="arch-node"><strong>Android + Web</strong><span>learner surfaces</span></div>
-                  <div class="arch-node highlight"><strong>Spring modules</strong><span>business rules</span></div>
-                  <div class="arch-node"><strong>PostgreSQL</strong><span>source of truth</span></div>
-                </div>
-                <div class="arch-line"></div>
-                <div class="arch-meta"><div>FIREBASE / IDENTITY</div><div>EXAMS / PROGRESS</div><div>PDF / CERTIFICATES</div></div>
-              </div>
-            </div>
-          </article>
-
-          <article class="project-row reveal">
-            <span class="project-index">05 — Cloud lab</span>
-            <div class="project-copy">
-              <h3>PulseStream</h3>
-              <p>An architecture-first lab for IoT telemetry and streaming analytics. Kafka connects ingestion and processing; PostgreSQL and Redis handle durable and fast data paths; Prometheus, Grafana, and exporters make the local platform observable.</p>
-              <div class="project-links"><span class="private-label">Private architecture lab · in active development</span></div>
-              <ul class="project-tech"><li>Kafka</li><li>Spring Boot</li><li>PostgreSQL</li><li>Redis</li><li>Prometheus</li><li>Grafana</li><li>Docker</li></ul>
-            </div>
-            <div class="architecture-shell">
-              <div class="architecture">
-                <div class="architecture-top"><span>event backbone</span><span>PS-05</span></div>
-                <div class="arch-flow">
-                  <div class="arch-node"><strong>Ingestion</strong><span>IoT telemetry</span></div>
-                  <div class="arch-node highlight"><strong>Kafka</strong><span>decoupled stream</span></div>
-                  <div class="arch-node"><strong>Processors</strong><span>analytics + anomaly</span></div>
-                </div>
-                <div class="arch-line"></div>
-                <div class="arch-meta"><div>DLQ / RESILIENCE</div><div>GRAFANA / SIGNALS</div><div>ADRs / DECISIONS</div></div>
-              </div>
-            </div>
-          </article>
-        </div>
+        <ol class="work-list">
+          <li><a class="work-row" href="projects-mohamed-baghdad.html#beanloyal"><span class="work-num">01</span><span class="work-name">BeanLoyal API</span><span class="work-tags">Spring Boot / Firebase</span><span class="work-arrow" aria-hidden="true">↗</span></a></li>
+          <li><a class="work-row" href="projects-mohamed-baghdad.html#retail-pos"><span class="work-num">02</span><span class="work-name">Im Étoile POS</span><span class="work-tags">TypeScript / Neon</span><span class="work-arrow" aria-hidden="true">↗</span></a></li>
+          <li><a class="work-row" href="projects-mohamed-baghdad.html#safebite"><span class="work-num">03</span><span class="work-name">SafeBite</span><span class="work-tags">Android / ML Kit</span><span class="work-arrow" aria-hidden="true">↗</span></a></li>
+          <li><a class="work-row" href="projects-mohamed-baghdad.html#edulife"><span class="work-num">04</span><span class="work-name">EduLife</span><span class="work-tags">Java 21 / PostgreSQL</span><span class="work-arrow" aria-hidden="true">↗</span></a></li>
+          <li><a class="work-row" href="projects-mohamed-baghdad.html#pulsestream"><span class="work-num">05</span><span class="work-name">PulseStream</span><span class="work-tags">Kafka / Grafana</span><span class="work-arrow" aria-hidden="true">↗</span></a></li>
+          <li><a class="work-row" href="projects-mohamed-baghdad.html#optometrix"><span class="work-num">06</span><span class="work-name">OpticPOS</span><span class="work-tags">React / SQLite</span><span class="work-arrow" aria-hidden="true">↗</span></a></li>
+          <li><a class="work-row" href="projects-mohamed-baghdad.html#atlasrent"><span class="work-num">07</span><span class="work-name">AtlasRent</span><span class="work-tags">React / TanStack</span><span class="work-arrow" aria-hidden="true">↗</span></a></li>
+          <li><a class="work-row" href="projects-mohamed-baghdad.html#beanloyal-web"><span class="work-num">08</span><span class="work-name">Bean Loyal Web</span><span class="work-tags">TanStack Start</span><span class="work-arrow" aria-hidden="true">↗</span></a></li>
+        </ol>
       </div>
     </section>
 
-    <section class="section" id="capabilities">
-      <div class="container">
-        <header class="section-head reveal">
-          <span class="section-index">02 / capabilities</span>
-          <h2 class="section-title">From request to runtime.</h2>
-          <p class="section-intro">I work across the parts of a backend that determine whether it remains understandable, deployable, and safe under imperfect conditions.</p>
+    <div class="paper">
+      <section class="help container" id="capabilities" aria-labelledby="help-title">
+        <div class="help-aside">
+          <h2 id="help-title" class="reveal">How can<br><span class="accent">I help?</span></h2>
+          <p class="label">Stack</p>
+          <ul class="pills"><li>Java</li><li>Spring Boot</li><li>Spring Security</li><li>Node.js</li><li>TypeScript</li><li>PostgreSQL</li><li>MySQL</li><li>MongoDB</li><li>Redis</li><li>Kafka</li></ul>
+          <p class="label">Delivery</p>
+          <ul class="pills"><li>Docker</li><li>Compose</li><li>GitHub Actions</li><li>Render</li><li>Vercel</li><li>Prometheus</li><li>Grafana</li></ul>
+        </div>
+        <ol class="services">
+          <li class="reveal"><span class="service-num">01</span><div><h3>API engineering</h3><p>Clear contracts, validation, authentication, authorization, rate policies, idempotent commands, and consistent error models.</p></div></li>
+          <li class="reveal"><span class="service-num">02</span><div><h3>Data systems</h3><p>Relational modeling and transactional flows first; document databases and caches where their access patterns earn the complexity.</p></div></li>
+          <li class="reveal"><span class="service-num">03</span><div><h3>Cloud delivery</h3><p>Environment-safe configuration, containerized builds, health checks, automated workflows, and deployment blueprints.</p></div></li>
+          <li class="reveal"><span class="service-num">04</span><div><h3>Operations</h3><p>Metrics, health endpoints, audit context, bounded jobs, and architecture documentation that make behavior visible.</p></div></li>
+        </ol>
+      </section>
+
+      <div class="marquee marquee-big" aria-hidden="true">
+        <ul class="marquee-track"><li>Backend</li><li>Cloud</li><li>Data</li><li>Streaming</li><li>Observability</li></ul>
+        <ul class="marquee-track"><li>Backend</li><li>Cloud</li><li>Data</li><li>Streaming</li><li>Observability</li></ul>
+      </div>
+
+      <section class="posture container" id="principles" aria-labelledby="posture-title">
+        <header class="work-head reveal">
+          <h2 id="posture-title">Engineering posture<sup>(03)</sup></h2>
+          <p class="label"><span class="asterisk" aria-hidden="true">*</span> Built for the second request</p>
         </header>
-
-        <div class="capability-ledger">
-          <article class="capability-row reveal"><h3>API engineering</h3><p>Clear contracts, validation, authentication, authorization, rate policies, idempotent commands, and consistent error models.</p><ul class="tech-line"><li>Java</li><li>Spring Boot</li><li>Node.js</li><li>REST</li><li>JWT</li><li>Firebase Auth</li></ul></article>
-          <article class="capability-row reveal"><h3>Data systems</h3><p>Relational modeling and transactional flows first; document databases and caches where their access patterns earn the complexity.</p><ul class="tech-line"><li>PostgreSQL</li><li>MySQL</li><li>MongoDB</li><li>Neon</li><li>Redis</li></ul></article>
-          <article class="capability-row reveal"><h3>Cloud delivery</h3><p>Environment-safe configuration, containerized builds, health checks, automated workflows, and deployment blueprints.</p><ul class="tech-line"><li>Docker</li><li>Compose</li><li>GitHub Actions</li><li>Render</li><li>Vercel</li></ul></article>
-          <article class="capability-row reveal"><h3>Operations</h3><p>Metrics, health endpoints, audit context, bounded jobs, and architecture documentation that make behavior visible.</p><ul class="tech-line"><li>Actuator</li><li>Micrometer</li><li>Prometheus</li><li>Grafana</li><li>ADRs</li></ul></article>
+        <div class="posture-table" role="table" aria-label="Engineering principles">
+          <div class="posture-row posture-headrow" role="row"><span role="columnheader">Principle</span><span role="columnheader">In practice</span><span role="columnheader">Focus</span></div>
+          <div class="posture-row reveal" role="row"><strong role="cell">Assume the network will lie.</strong><span role="cell">Timeouts, repeated commands, and partial state are design inputs. Idempotency and explicit error handling belong in the first version.</span><span role="cell">Failure-aware</span></div>
+          <div class="posture-row reveal" role="row"><strong role="cell">Make behavior inspectable.</strong><span role="cell">Health checks and metrics turn runtime questions into answers.</span><span role="cell">Observable</span></div>
+          <div class="posture-row reveal" role="row"><strong role="cell">Record why, not just what.</strong><span role="cell">Architecture decision records, deployment notes, and operational limits keep a codebase legible when context changes.</span><span role="cell">Documented</span></div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
 
-    <section class="section" id="principles">
+    <section class="closer" aria-labelledby="closer-title">
       <div class="container">
-        <header class="section-head reveal">
-          <span class="section-index">03 / engineering posture</span>
-          <h2 class="section-title">Built for the second request.</h2>
-          <p class="section-intro">A useful system is not only one that works once. It has to survive retries, explain failures, and leave the next engineer a map.</p>
-        </header>
-        <div class="principles-grid">
-          <article class="principle reveal"><span class="principle-num">01 / failure-aware</span><div><h3>Assume the network will lie.</h3><p>Timeouts, repeated commands, and partial state are design inputs. Idempotency and explicit error handling belong in the first version.</p></div></article>
-          <article class="principle reveal"><span class="principle-num">02 / observable</span><div><h3>Make behavior inspectable.</h3><p>Health checks and metrics turn runtime questions into answers.</p></div></article>
-          <article class="principle reveal"><span class="principle-num">03 / documented</span><div><h3>Record why, not just what.</h3><p>Architecture decision records, deployment notes, and operational limits keep a codebase legible when context changes.</p></div></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="cta-section">
-      <div class="container">
-        <span class="section-index reveal">04 / contact</span>
-        <h2 class="reveal">Have a system to <a href="mailto:baghdadmohamed.me@gmail.com">ship?</a></h2>
-        <div class="cta-meta reveal">
-          <div class="cta-actions">
-            <a class="button-primary" href="contact-mohamed-baghdad.html">Start a conversation <span class="arrow-box" aria-hidden="true">↗</span></a>
-            <button class="button-ghost" type="button" data-copy="baghdadmohamed.me@gmail.com" data-copy-status="#home-copy-status">
-              <span data-copy-label>Copy email</span>
-            </button>
+        <p class="label reveal"><span class="asterisk" aria-hidden="true">*</span> Open to backend &amp; cloud roles</p>
+        <h2 id="closer-title" class="reveal">Let's build<br>something <span class="accent">reliable</span></h2>
+        <div class="closer-foot reveal">
+          <p>APIs, data pipelines, platforms, or a system that doesn't have a name yet. If it has to survive real traffic, let's talk.</p>
+          <div class="closer-actions">
+            <button class="closer-email" type="button" data-copy="baghdadmohamed.me@gmail.com" data-copy-status="#home-copy-status" aria-label="Copy email address"><span data-copy-label>baghdadmohamed.me@gmail.com</span></button>
+            <a class="button-ghost" href="contact-mohamed-baghdad.html">Start a conversation <span aria-hidden="true">→</span></a>
           </div>
-          <span>Casablanca, Morocco&nbsp;· GMT+1</span>
         </div>
         <span class="status-live" id="home-copy-status" role="status" aria-live="polite"></span>
       </div>
